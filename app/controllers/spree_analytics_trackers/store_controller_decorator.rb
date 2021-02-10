@@ -9,5 +9,5 @@ module SpreeAnalyticsTrackers
 end
 
 if defined?(Spree::StoreController)
-  ::Spree::StoreController.include(::SpreeAnalyticsTrackers::StoreControllerDecorator)
+  ::Spree::StoreController.prepend(::SpreeAnalyticsTrackers::StoreControllerDecorator)
 end
